@@ -1,0 +1,19 @@
+package com;
+import java.util.Scanner;
+
+public class MainQueue {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		QueueX printerQueue = new QueueX(5);
+		
+		int imputStr;
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Enter transaction ID: ");
+		}
+
+	}
+
+}

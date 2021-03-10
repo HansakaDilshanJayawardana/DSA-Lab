@@ -1,0 +1,28 @@
+package com;
+import java.util.Scanner;
+
+public class MainQueue {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);//scanner constructor
+		QueueX printerQueue = new QueueX(5);
+		
+		int inputStr;//declare a variable
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Enter transaction ID:" + i + " " + ":" + " ");//prompt
+			inputStr = sc.nextInt();//input
+			printerQueue.insert(inputStr);
+			
+		}
+		
+		while (!printerQueue.isEmpty()) {
+			int value;
+			value = printerQueue.remove();
+			System.out.println("Enter transaction ID:" + value);
+		}
+
+	}
+
+}

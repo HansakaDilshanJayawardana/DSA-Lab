@@ -1,0 +1,33 @@
+package com;
+
+public class QueueX {
+	
+	private int maxSize;
+	private int front;
+	private int rear;
+	private int nItem;
+	private int[] queueArr;
+	
+	public QueueX(int s) {
+		maxSize = s;
+		front = 0;
+		rear = -1;
+		nItem = 0;
+		queueArr = new int[maxSize];
+	}
+	
+	public boolean isFull() {
+		if(rear == maxSize - 1)
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean isEmpty() {
+		if(nItem == 0)
+			return true;
+		else
+			return false;
+	}
+
+}

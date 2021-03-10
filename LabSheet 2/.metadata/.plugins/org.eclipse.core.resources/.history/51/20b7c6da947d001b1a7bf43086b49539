@@ -1,0 +1,75 @@
+package com;
+
+public class QueueX {
+	
+	//declare variables
+	private int maxSize;
+	private int front;
+	private int rear;
+	private int nItem;
+	private int[] queueArr;
+	
+	public QueueX(int s) {
+		//initialization
+		maxSize = s;
+		front = 0;
+		rear = -1;
+		nItem = 0;
+		queueArr = new int[maxSize];
+	}
+	
+	//isFull Method
+	public boolean isFull() {
+		if(rear == maxSize - 1)
+			return true;
+		else
+			return false;
+	}
+	
+	//isEmpty Method
+	public boolean isEmpty() {
+		if(nItem == 0)
+			return true;
+		else
+			return false;
+	}
+	
+	//insert Method
+	public void insert(int j) {
+		if(!isFull()) {
+			/*rear++;
+			queueArr[rear] = j;*/
+			queueArr[++rear] = j;
+			nItem++;
+		}
+		else {
+			System.out.println("Queue array is full");//prompt error message
+		}
+	}
+	
+	//delete Method
+	public int remove() {
+		if(!isEmpty()) {
+			nItem--;//decrement the nItem 
+			/*front++;
+			return queueArr[front];*/
+			return queueArr[front++];//increment front and return the value of front
+		}
+		else {
+			System.out.println("Queue Array is Empty");//prompt error message
+			return -99;
+		}
+	}
+	
+	//peek Method
+	public int peekFront() {
+		if(!isEmpty()) {
+			return queueArr[front];
+		}
+		else {
+			System.out.println("Queue Array is Empty");//prompt error message
+			return -99;
+		}
+	}
+
+}

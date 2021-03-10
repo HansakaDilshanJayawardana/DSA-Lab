@@ -1,0 +1,11 @@
+package com;
+
+public class QueueX {
+	
+	private int maxSize;
+	private int front;
+	private int rear;
+	private int nItem;
+	private int int[] queueArr;
+
+}
